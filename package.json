@@ -1,0 +1,26 @@
+{
+  "name": "serenity-playwright-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",  
+    "scripts": {
+        "test": "playwright test",
+        "test:headed": "playwright test --headed",
+        "report": "playwright show-report",
+        "serenity-report": "npx @serenity-js/html-reporter serve --open"
+    },
+  "keywords": [],
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@serenity-js/assertions": "^3.49.0",
+    "@serenity-js/console-reporter": "^3.49.0",
+    "@serenity-js/core": "^3.49.0",
+    "@serenity-js/html-reporter": "^3.49.0",
+    "@serenity-js/playwright": "^3.49.0",
+    "@serenity-js/playwright-test": "^3.49.0",
+    "@serenity-js/rest": "^3.49.0",
+    "@serenity-js/web": "^3.49.0",
+    "@types/node": "^26.6.6"
+  }
+}
