@@ -14,7 +14,9 @@ describe('Login', () => {
             Ensure.that(Page.current().title(),
                 includes('ParaBank')
             ),
+        );
 
+        await actor.attemptsTo(
             Login.withCredentials('john', 'demo'),
             Ensure.that(AccountsOverview.headingText(),
                 equals('Accounts Overview')),

@@ -1,5 +1,5 @@
 import { By, PageElement, Text } from '@serenity-js/web'
-import { Question } from "@serenity-js/core"
+import { Answerable, Question } from "@serenity-js/core"
 
 export const AccountsOverview = {
     headingText: () =>
@@ -22,6 +22,15 @@ export const AccountsOverview = {
             )
         ),
 
+    accountNumberIsDisplayed: (accountNumber: Answerable<string>) =>
+        Question.about<boolean>(
+            'whether the new account number is displayed',
+            async actor => actor.answer(
+                PageElement.located(
+                    By.role('link', { name: accountNumber, exact: true })
+                ).isPresent()
+            )
+        ),
 };
 
 
